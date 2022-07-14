@@ -1,0 +1,150 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: #BBBBBB;
+    padding: 5px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 800px;
+    margin: 2px ;
+    padding: 0 10px;
+}
+
+h2.titulo  {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 30px 0 20px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 120px;
+    font-size: 1.5em;
+    margin: 0px 95px;
+    padding: 45px 130px 30px;
+    display: justify-content;
+    background-position: 40% 25%;
+    background: #F2F2F2;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    resize: none;
+}
+
+
+h3.mostratxt {
+    display: initial;
+    font-size: 1em;
+    margin-top: 70px;
+}
+
+    
+
+.galery {
+    position: absolute;
+    top: 135px;
+    left: 700px;
+    width: 410px;
+    height: 420px;
+   background: url('imagem_clean.png') center center no-repeat; 
+}
+
+#mencripto {
+   top: 335px;
+   width: 250px;
+}
+
+#galery1 {
+    position: absolute;
+    top: 135px;
+    left: 700px;
+    width: 410px;
+    height: 420px;
+}  
+
+.description {
+    position: absolute;
+    width: 295px;
+    left: 60px;
+    bottom: 180px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+.mostratxt {
+    position: absolute;
+    width: 295px;
+    left: 760px;
+    bottom: 250px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    background: url('imagem_clean.png') center center no-repeat; 
+  
+}
+.forma {
+    border-color: white;
+}
+
+
+p {
+   margin: 5px 90px 30px ;
+   font-size: 13px;
+}
+
+button {
+    margin-left: 100px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+    background-color: blue;
+    padding: 8px 10px;
+    }
+
+button:hover {
+    background: darkorange;
+    transform: scale(1.03);
+}
+
+
+.ctrlc {
+    position: absolute;
+    left: 780px;
+    bottom: 60px;
+    opacity: 0.3;
+    transform: 400ms;
+
+}
+
+
+
+.banner {
+    width:100%;
+}
+
+
+.copyright {
+    color: #000000;
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    background: #BFBBBB;
+    padding: 16px ;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+
+    
+    

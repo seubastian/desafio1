@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width">
+	<title>Oracle ONE - Lógica de Programação - Decodificador de Texto</title>
+	<link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+ 	<body>
+ 		
+ 		 <header>
+            <div class="caixa">
+           			<h1><img src="logo_a_alura20.png"></h1>
+            </div>
+        </header>
+ 		
+ 				
+ 		<main>
+	 			<h2 class="titulo"> Challenge 1 Oracle ONE - Lógica de Programação - Decodificador de Texto</h2>
+	 			
+				<textarea cols="18" rows="10" id="mencripto" required autofocus placeholder="digite ou cole o seu texto"></textarea>			  	 		
+										
+				<p> * Apenas letras minúsculas e sem acento</p>
+		
+
+				<button type="button" onclick = "Criptografar()"> Criptografar </button>
+
+				<button type="button" onclick = "Descriptografar()"> Descriptografar</button>
+
+				<section class="galery" id="galery1">
+                  		<aside class="description">Nenhum texto digitado.</aside>
+                </section>
+
+					
+			 	<h3 id="frase-cripto" class = "mostratxt"> </h3>
+
+
+			 	<section class = "ctrlc">
+					 <button type="button"> Copiar </button>
+			 	</section>
+					 						 						
+			<footer>
+    		 	&copy; Sebastião Antonio Campos - junho 2022  e-mail: seubastian@icloud.com
+			</footer>
+							 
+		</main>
+	</body>
+
+</html>
+
+<script>
+	  	 	function Criptografar() {
+					var letras = ["a","b","c","d","e"];
+			    	var cripto = ["enter","imes","ai","ober","ufat"];
+		       		var entrada = document.getElementById("mencripto").value;
+		       		if (entrada == "") {
+		       			document.getElementById("galary1").innerHTML=""
+		       		} else {
+			       		frasenova = entrada.split("");
+			       		vetor = entrada.split("");
+			       		var taman = (letras.length);
+				        var lugar = 0;
+				        var achou = 0;
+				        while(lugar < taman) {
+				            while(achou !== -1) {
+				                achou = vetor.indexOf(letras[lugar]);
+				                if (achou == -1) {
+				                      break;
+				                }
+				                vetor.splice(achou,1,"Z");
+				                frasenova.splice(achou,1,cripto[lugar])
+				            }
+				            achou = 0;
+				            lugar++;
+				        }  
+				        var minhaFrase = frasenova.join("");
+				        navigator.clipboard.writeText(minhaFrase);
+				        document.getElementById("frase-cripto").innerHTML="Seu texto criptografado: <br> <br>" +minhaFrase;
+				        document.getElementById('mencripto').value = '';
+			    	}
+			}
+
+			function Descriptografar() {
+				var entrada = document.getElementById("mencripto").value;
+				if (entrada == "") {
+		       			document.getElementById("galary1").innerHTML=""
+		       		} else {
+						var fraseNova = " ";
+					    var fraseLegal1 = " ";
+					    var fraseLegal2 = " ";
+					    var fraseLegal3 = " ";
+					    var fraseLegal4 = " ";
+					    var fraseLegal5 = " ";
+					    fraseNova = entrada
+					    fraseLegal1 = fraseNova.replace(/enter/g, "a");
+					    fraseLegal2 = fraseLegal1.replace(/imes/g, "b");
+					    fraseLegal3 = fraseLegal2.replace(/ai/g, "c");
+					    fraseLegal4 = fraseLegal3.replace(/ober/g, "d");
+					    fraseLegal5 = fraseLegal4.replace(/ufat/g, "e");
+					    document.getElementById("frase-cripto").innerHTML="Seu texto descriptografado: <br> <br>" +fraseLegal5;
+					    navigator.clipboard.writeText(fraseLegal5);
+					    document.getElementById('mencripto').value = '';
+					}
+				}
+					    
+</script>
+
+
